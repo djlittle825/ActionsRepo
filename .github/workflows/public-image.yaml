@@ -13,5 +13,5 @@ jobs:
                docker build . -t dlittlecode/hello-docker-hub:latest
             - name: publish
               run: |
-                docker login -u dlittlecode -p ${{ secrets.DOCKER_HUB_TOKEN }}
+                docker login -u dlittlecode p ${{ secrets.DOCKER_HUB_TOKEN }}
                 docker push dlittlecode/hello-docker-hub:latest
