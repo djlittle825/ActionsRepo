@@ -10,8 +10,8 @@ jobs:
               uses: actions/checkout@v3
             - name: build
               run: |
-               docker build . -t dlittlecode/hello-docker-hub:latest
+               docker build . -t dlittlecode/ci-actions:latest
             - name: publish
               run: |
                 docker login -u dlittlecode -p ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-                docker push dlittlecode/hello-docker-hub:latest
+                docker push dlittlecode/ci-actions:latest
